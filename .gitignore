@@ -1,0 +1,10 @@
+# Node dependencies
+node_modules/
+
+# Credentials and secrets
+.env
+token.json
+credentials.json
+
+
+.env
