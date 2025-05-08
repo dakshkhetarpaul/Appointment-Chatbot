@@ -11,20 +11,20 @@ async function main() {
         { type: 'input', name: 'insurance', message: "Insurance Provider:" }
       ]);
 
-  console.log("\n🧠 Determining the appropriate therapist...");
+  console.log("\nDetermining the appropriate therapist...");
   const specialty = await getSpecialtyFromAI(problem);
   console.log(`Matched Specialty: ${specialty}`);
 
   const therapist = await findTherapist(specialty);
   if (!therapist) {
-    console.error("❌ No therapist found for this specialty.");
+    console.error("No therapist found for this specialty.");
     return;
   }
 
-  console.log(`✅ Therapist found: ${therapist.name} (${therapist.email})`);
+  console.log(`Therapist found: ${therapist.name} (${therapist.email})`);
 
   const meetingLink = await bookMeeting(name, therapist.email, time);
-  console.log(`📅 Meeting booked: ${meetingLink}`);
+  console.log(`Meeting booked: ${meetingLink}`);
 }
 
 main();
